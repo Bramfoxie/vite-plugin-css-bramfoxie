@@ -1,11 +1,11 @@
 {
-  "name": "vite-plugin-css-mila",
+  "name": "vite-plugin-css-bramfoxie",
   "private": false,
-  "version": "2.0.10",
+  "version": "3.0.0",
   "description": "Vite plugin to minify CSS",
-  "author": "Milana Kustinskaya <milanovasmile@gmail.com>",
+  "author": "Milana Kustinskaya <account@bramfoxie.com>",
   "license": "MIT",
-  "homepage": "https://github.com/MilanovaSmile/vite-plugin-css-mila",
+  "homepage": "https://github.com/Bramfoxie/vite-plugin-css-bramfoxie",
   "type": "module",
   "keywords": [
     "vite",
@@ -14,14 +14,20 @@
     "compiler"
   ],
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
-  "main": "./dist/css-mila.umd.js",
-  "module": "./dist/css-mila.es.js",
+  "types": "./index.d.ts",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "main": "./dist/css-bramfoxie.umd.js",
+  "module": "./dist/css-bramfoxie.es.js",
   "exports": {
     ".": {
-      "import": "./dist/css-mila.es.js",
-      "require": "./dist/css-mila.umd.js"
+      "types": "./index.d.ts",
+      "import": "./dist/css-bramfoxie.es.js",
+      "require": "./dist/css-bramfoxie.umd.js"
     }
   },
   "scripts": {
@@ -29,11 +35,13 @@
     "build": "vite build --config build.vite.config.js"
   },
   "devDependencies": {
-    "vite": "^5.2.9"
+    "vite": "^8.3.4"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "vite": ">=8"
+  },
   "dependencies": {
     "clean-css": "^5.3.3",
-    "colorette": "^2.0.20"
+    "picocolors": "^1.1.1"
   }
 }

@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import CssMila from './src/index.js';
+import CssBramfoxie from './src/index.js';
 
 export default defineConfig({
     root: './example',
@@ -7,7 +7,7 @@ export default defineConfig({
         outDir: '../dist-example',
     },
     plugins: [
-        CssMila({
+        CssBramfoxie({
             outDir: '../dist-example',
             minifyOptions: {
                 inline: ['local']
